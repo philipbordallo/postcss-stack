@@ -22,16 +22,6 @@
   },
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.es.js",
-  "files": [
-    "./dist/index.cjs.js",
-    "./dist/index.es.js",
-    ".gitignore",
-    ".editorconfig",
-    ".tape.js",
-    ".rollup.js",
-    ".travis.js",
-    "*"
-  ],
   "scripts": {
     "prepublishOnly": "npm test",
     "pretest": "rollup -c .rollup.js --silent",
