@@ -25,24 +25,29 @@
   "files": [
     "./dist/index.cjs.js",
     "./dist/index.es.js",
-    ".*",
+    ".gitignore",
+    ".editorconfig",
+    ".tape.js",
+    ".rollup.js",
+    ".travis.js",
     "*"
   ],
   "scripts": {
     "prepublishOnly": "npm test",
     "pretest": "rollup -c .rollup.js --silent",
-    "test": "postcss-tape"
+    "test": "postcss-tape",
+    "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "dependencies": {
-    "postcss": "^6.0.22",
+    "postcss": "^6.0.23",
     "postcss-values-parser": "^1.5.0"
   },
   "devDependencies": {
+    "auto-changelog": "^1.7.1",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "eslint": "^4.19.1",
     "postcss-tape": "^2.2.0",
     "rollup": "^0.60.7",
-    "rollup-plugin-babel": "^3.0.4"
+    "rollup-plugin-babel": "^3.0.5"
   }
 }

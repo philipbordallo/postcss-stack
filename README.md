@@ -1,5 +1,12 @@
-# [PostCSS](https://github.com/postcss/postcss) Stack #
+# PostCSS Stack [<img src="https://postcss.github.io/postcss/logo.svg" alt="PostCSS" width="90" height="90" align="right">][postcss]
 > A better way to manage z-indexes
+
+[![NPM Version][npm-img]][npm-url]
+[![Build Status][cli-img]][cli-url]
+[![Dependency Status][david-img]][david-url] 
+[![Development Dependency Status][david-dev-img]][david-dev-url]
+
+Define the stack of components and PostCSS Stack will resolve the z-indexes for you instead of playing a game of `z-index: 99999`.
 
 
 ## Install ##
@@ -64,6 +71,14 @@ stack({
 }
 ```
 
+## Options ##
+
+option | type | default | description
+:--- |:--- |:--- |:--- 
+**`list`** | _array_ | `[]` |  List of items in the stack
+**`increment`** | _number_ | `1` | The increment value 
+**`reverse`** | _boolean_ | `false` | Whether or not the list should be reversed
+ 
 
 ## Stacking Context ##
 
@@ -73,3 +88,18 @@ For more information on stacking context, [MDN has a good overview](https://deve
 
 
 ## [License](./LICENSE) ##
+
+
+[david-img]: https://img.shields.io/david/philipbordallo/postcss-stack.svg
+[david-url]: https://david-dm.org/philipbordallo/postcss-stack
+
+[david-dev-img]: https://img.shields.io/david/dev/philipbordallo/postcss-stack.svg
+[david-dev-url]: https://david-dm.org/philipbordallo/postcss-stack?type=dev
+
+[cli-img]: https://img.shields.io/travis/philipbordallo/postcss-stack.svg
+[cli-url]: https://travis-ci.org/philipbordallo/postcss-stack
+
+[npm-img]: https://img.shields.io/npm/v/postcss-stack.svg
+[npm-url]: https://www.npmjs.com/package/postcss-stack
+
+[postcss]: https://github.com/postcss/postcss
