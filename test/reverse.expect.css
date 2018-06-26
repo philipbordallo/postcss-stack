@@ -1,0 +1,16 @@
+.application {
+  background-image: url('./test.jpg');
+  z-index: 0;
+}
+
+.modal {
+  z-index: 2;
+}
+
+.tool-tip {
+  z-index: 1;
+}
+
+.beneath {
+  z-index: -1;
+}

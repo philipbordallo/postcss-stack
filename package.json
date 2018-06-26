@@ -1,0 +1,48 @@
+{
+  "name": "postcss-stack",
+  "version": "1.0.0",
+  "description": "A better way to manage z-indexes",
+  "author": "Philip Bordallo",
+  "license": "MIT",
+  "repository": "philipbordallo/postcss-stack",
+  "homepage": "https://github.com/philipbordallo/postcss-stack#readme",
+  "bugs": "https://github.com/philipbordallo/postcss-stack/issues",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "z-index",
+    "zindex",
+    "stack",
+    "stacks",
+    "stacking"
+  ],
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
+  "files": [
+    "./dist/index.cjs.js",
+    "./dist/index.es.js",
+    ".*",
+    "*"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm test",
+    "pretest": "rollup -c .rollup.js --silent",
+    "test": "postcss-tape"
+  },
+  "dependencies": {
+    "postcss": "^6.0.22",
+    "postcss-values-parser": "^1.5.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "postcss-tape": "^2.2.0",
+    "rollup": "^0.60.7",
+    "rollup-plugin-babel": "^3.0.4"
+  }
+}
