@@ -7,10 +7,6 @@ export default {
     { file: './dist/index.es.js', format: 'es' }
   ],
   plugins: [
-    babel({
-      presets: [
-        ['env', { modules: false, targets: { node: 6 } }]
-      ]
-    })
+    babel()
   ]
 };
