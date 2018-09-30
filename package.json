@@ -29,15 +29,15 @@
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "dependencies": {
-    "postcss": "^7.0.2",
-    "postcss-values-parser": "^1.5.0"
+    "postcss": "^7.0.4",
+    "postcss-values-parser": "^2.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
     "auto-changelog": "^1.8.0",
     "postcss-tape": "^2.2.0",
-    "rollup": "^0.65.2",
+    "rollup": "^0.66.2",
     "rollup-plugin-babel": "^4.0.3"
   }
 }
