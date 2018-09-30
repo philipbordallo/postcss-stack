@@ -1,11 +1,14 @@
 const DEFAULT_OPTIONS = {
   list: [],
   increment: 1,
-  reverse: false
+  reverse: false,
 };
 
 function getStack(argOptions) {
-  const options = Object.assign({}, DEFAULT_OPTIONS, argOptions);
+  const options = {
+    ...DEFAULT_OPTIONS,
+    ...argOptions,
+  };
 
   const list = options.reverse
     ? options.list.reverse()
@@ -16,7 +19,7 @@ function getStack(argOptions) {
   const listSet = new Set();
 
   list.forEach((item) => {
-    const isObject = (typeof item === 'object');
+    const isObject = typeof item === 'object';
     const name = isObject
       ? Object.keys(item)[0]
       : item;
@@ -27,13 +30,13 @@ function getStack(argOptions) {
       if (isObject) {
         explicitList.push({
           name,
-          zIndex: item[name]
+          zIndex: item[name],
         });
       }
       else {
         incrementalList.push({
           name,
-          zIndex: null
+          zIndex: null,
         });
       }
     }
@@ -41,18 +44,21 @@ function getStack(argOptions) {
 
   const combinedLists = [
     ...incrementalList,
-    ...explicitList
+    ...explicitList,
   ];
 
   return combinedLists
     .map((item, index) => {
-      const value = (item.zIndex !== null)
+      const value = item.zIndex !== null
         ? item.zIndex
         : index * options.increment;
 
       return { [item.name]: value };
     })
-    .reduce((collection, item) => Object.assign({}, collection, item), {});
+    .reduce((collection, item) => ({
+      ...collection,
+      ...item,
+    }), {});
 }
 
 export default getStack;

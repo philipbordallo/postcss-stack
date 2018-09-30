@@ -1,7 +1,7 @@
 node_modules/
 *.log*
 
-lib/
+src/
 test/
 .travis.yml
-
+.tape.js

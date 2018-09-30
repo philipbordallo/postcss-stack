@@ -20,11 +20,18 @@
   "engines": {
     "node": ">=6.0.0"
   },
+  "babel": {
+    "presets": [
+      "./config/babel.config.js"
+    ]
+  },
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.es.js",
   "scripts": {
     "prepublishOnly": "npm test",
-    "pretest": "rollup -c .rollup.js --silent",
+    "build": "rollup --config config/rollup.config.js --silent",
+    "lint": "eslint --config config/eslint.config.js ./src/",
+    "pretest": "npm run build && npm run lint",
     "test": "postcss-tape",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },

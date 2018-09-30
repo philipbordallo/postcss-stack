@@ -1,7 +1,7 @@
-import babel from 'rollup-plugin-babel';
+const babel = require('rollup-plugin-babel');
 
-export default {
-  input: 'index.js',
+module.exports =  {
+  input: 'src/index.js',
   output: [
     { file: './dist/index.cjs.js', format: 'cjs' },
     { file: './dist/index.es.js', format: 'es' }
