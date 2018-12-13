@@ -1,7 +1,6 @@
 module.exports = {
-  'postcss-stack': {
     'basic': {
-      message: 'supports basic usage',
+      message: 'should support basic usage',
       options: {
         list: [
           { beneath: -1 },
@@ -12,7 +11,7 @@ module.exports = {
       }
     },
     'increment': {
-      message: 'allows larger increments',
+      message: 'should allow larger increments',
       options: {
         list: [
           { beneath: -1 },
@@ -24,7 +23,22 @@ module.exports = {
       }
     },
     'reverse': {
-      message: 'allows list to be reversed',
+      message: 'should allow list to be reversed',
+      options: {
+        list: [
+          'modal',
+          'tool-tip',
+          'application',
+          { beneath: -1 }
+        ],
+        reverse: true
+      }
+    },
+    'error-message': {
+      message: 'should throw an error if stack hasn’t been defined',
+      errors: {
+        message: /Unknown/
+      },
       options: {
         list: [
           'modal',
@@ -35,5 +49,4 @@ module.exports = {
         reverse: true
       }
     }
-  }
-};
+  };

@@ -3,10 +3,10 @@ import parser from 'postcss-values-parser';
 
 import getStack from './lib/getStack';
 
-
+const PLUGIN_NAME = 'postcss-stack';
 const stackRegExp = /(^|[^\w-])(stack?)\(/i;
 
-export default postcss.plugin('postcss-stack', options => (root) => {
+export default postcss.plugin(PLUGIN_NAME, options => (root) => {
   const stacked = getStack(options);
 
   root.walkDecls((decl) => {
@@ -18,7 +18,15 @@ export default postcss.plugin('postcss-stack', options => (root) => {
       ast.walkType('func', (node) => {
         const stack = node.nodes.filter(item => item.type === 'string')[0].value;
 
-        node.replaceWith(stacked[stack]);
+        if (typeof stacked[stack] !== 'undefined') {
+          node.replaceWith(stacked[stack]);
+        }
+        else {
+          throw decl.error('Unknown stack', {
+            plugin: PLUGIN_NAME,
+            word: stack,
+          });
+        }
       });
 
       const modifiedValue = ast.toString();
