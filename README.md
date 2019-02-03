@@ -54,30 +54,102 @@ yarn add --dev postcss-stack
 Add it to your PostCSS work-flow, [whatever way you choose to](https://github.com/postcss/postcss#usage).
 
 ```js
-// es2015
-import stack from 'postcss-stack';
-
-// or commonjs
 const stack = require('postcss-stack');
 
-stack({
-  list: [
-    { 'beneath': -1 },
-    'application',
-    'tool-tip',
-    'modal'
+module.exports = {
+  plugins: [
+    stack({
+      list: [
+        { 'beneath': -1 },
+        'application',
+        'tool-tip',
+        'modal'
+      ]
+    })
   ]
-});
+};
 ```
 
+Then call the `stack` function with relevant item name in your css.
+
+```pcss
+.application {
+  z-index: stack('application');
+}
+```
+
+And profit.
+
+```css
+.application {
+  z-index: 0;
+}
+```
+
+See [tests](./test/) for more examples.
 
 ## Options ##
 
 option | type | default | description
 :--- |:--- |:--- |:--- 
-**`list`** | _array_ or _function_ | `[]` |  Array of items in the stack or function returning array of items
-**`increment`** | _number_ | `1` | The increment value 
- 
+[**`list`**](#list) | _array_ or _function_ | `[]` |  Array of items in the stack or function returning array of items
+[**`increment`**](#increment) | _number_ | `1` | The increment value 
+
+### `list`
+The list of items that defines the stack. An item can either be explicitly defined by a name key and z-index value or by a name string that will have it's z-index auto-generated.
+
+```js
+stack({
+  list: [
+    { 'explicit': -10 }, // stack('explicit') => z-index: -10
+    'auto', // stack('auto') => z-index: 0
+    'generated', // stack('generated') => z-index: 1
+  ]
+});
+```
+
+By default it's ordered by the order of the array, but you can use `Array.prototype.reverse()` to better visualize how the stack is set.
+
+
+```js
+stack({
+  list: [
+    { 'beneath': -1 }, // z-index: -1
+    'application', // z-index: 0
+    'tool-tip',  // z-index: 1
+    'modal'  // z-index: 2
+  ]
+});
+
+// Reversed
+stack({
+  list: [
+    'modal' // z-index: 2
+    'tool-tip', // z-index: 1
+    'application', // z-index: 0
+    { 'beneath': -1 }, // z-index: -1
+  ].reverse();
+});
+```
+
+
+### `increment`
+
+Allows a increment value to be set. For example if `increment: 100`, the output of our example would be:
+
+```css
+.modal {
+  z-index: 200;
+}
+
+.tool-tip {
+  z-index: 100;
+}
+
+.element-beneath {
+  z-index: -1;
+}
+```
 
 ## Stacking Context ##
 
