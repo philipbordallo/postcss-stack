@@ -9,11 +9,15 @@ function getStack(argOptions) {
     ...argOptions,
   };
 
+  const list = Array.isArray(options.list)
+    ? options.list
+    : options.list();
+
   const explicitList = [];
   const incrementalList = [];
   const listSet = new Set();
 
-  options.list.forEach((item) => {
+  list.forEach((item) => {
     const isObject = typeof item === 'object';
     const name = isObject
       ? Object.keys(item)[0]

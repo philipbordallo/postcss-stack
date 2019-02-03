@@ -1,0 +1,19 @@
+.first {
+  z-index: stack('first');
+}
+
+.second {
+  z-index: stack('second');
+}
+
+.third {
+  z-index: stack('third');
+}
+
+.fourth {
+  z-index: stack('fourth');
+}
+
+.fifth {
+  z-index: stack('fifth');
+}

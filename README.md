@@ -75,7 +75,7 @@ stack({
 
 option | type | default | description
 :--- |:--- |:--- |:--- 
-**`list`** | _array_ | `[]` |  List of items in the stack
+**`list`** | _array_ or _function_ | `[]` |  Array of items in the stack or function returning array of items
 **`increment`** | _number_ | `1` | The increment value 
  
 
