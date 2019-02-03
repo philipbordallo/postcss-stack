@@ -1,0 +1,16 @@
+.application {
+  background-image: url('./test.jpg');
+  z-index: stack('application');
+}
+
+.modal {
+  z-index: stack('modal');
+}
+
+.tool-tip {
+  z-index: stack('tool-tip');
+}
+
+.beneath {
+  z-index: stack('beneath');
+}

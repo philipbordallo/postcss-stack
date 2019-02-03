@@ -11,6 +11,18 @@ module.exports = {
     }
   },
 
+  'reverse': {
+    message: 'should support list being reversed',
+    options: {
+      list: [
+        'modal',
+        'tool-tip',
+        'application',
+        { beneath: -1 }
+      ].reverse()
+    }
+  },
+
   'list-as-a-function': {
     message: 'should allow list as a function',
     options: {
