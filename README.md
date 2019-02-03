@@ -4,9 +4,38 @@
 [![NPM Version][npm-img]][npm-url]
 [![Build Status][cli-img]][cli-url]
 [![Dependency Status][david-img]][david-url] 
-[![Development Dependency Status][david-dev-img]][david-dev-url]
 
 Define the stack of components and PostCSS Stack will resolve the z-indexes for you instead of playing a game of `z-index: 99999`.
+
+**Input**
+```pcss
+.modal {
+  z-index: stack('modal');
+}
+
+.tool-tip {
+  z-index: stack('tool-tip');
+}
+
+.element-beneath {
+  z-index: stack('beneath');
+}
+```
+
+**Output**
+```css
+.modal {
+  z-index: 2;
+}
+
+.tool-tip {
+  z-index: 1;
+}
+
+.element-beneath {
+  z-index: -1;
+}
+```
 
 
 ## Install ##
@@ -41,35 +70,6 @@ stack({
 });
 ```
 
-**Input**
-```pcss
-.modal {
-  z-index: stack('modal');
-}
-
-.tool-tip {
-  z-index: stack('tool-tip');
-}
-
-.element-beneath {
-  z-index: stack('beneath');
-}
-```
-
-**Output**
-```css
-.modal {
-  z-index: 2;
-}
-
-.tool-tip {
-  z-index: 1;
-}
-
-.element-beneath {
-  z-index: -1;
-}
-```
 
 ## Options ##
 
@@ -77,7 +77,6 @@ option | type | default | description
 :--- |:--- |:--- |:--- 
 **`list`** | _array_ | `[]` |  List of items in the stack
 **`increment`** | _number_ | `1` | The increment value 
-**`reverse`** | _boolean_ | `false` | Whether or not the list should be reversed
  
 
 ## Stacking Context ##
@@ -92,9 +91,6 @@ For more information on stacking context, [MDN has a good overview](https://deve
 
 [david-img]: https://img.shields.io/david/philipbordallo/postcss-stack.svg
 [david-url]: https://david-dm.org/philipbordallo/postcss-stack
-
-[david-dev-img]: https://img.shields.io/david/dev/philipbordallo/postcss-stack.svg
-[david-dev-url]: https://david-dm.org/philipbordallo/postcss-stack?type=dev
 
 [cli-img]: https://img.shields.io/travis/philipbordallo/postcss-stack.svg
 [cli-url]: https://travis-ci.org/philipbordallo/postcss-stack

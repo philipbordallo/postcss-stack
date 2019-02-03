@@ -1,7 +1,6 @@
 const DEFAULT_OPTIONS = {
   list: [],
   increment: 1,
-  reverse: false,
 };
 
 function getStack(argOptions) {
@@ -10,15 +9,11 @@ function getStack(argOptions) {
     ...argOptions,
   };
 
-  const list = options.reverse
-    ? options.list.reverse()
-    : options.list;
-
   const explicitList = [];
   const incrementalList = [];
   const listSet = new Set();
 
-  list.forEach((item) => {
+  options.list.forEach((item) => {
     const isObject = typeof item === 'object';
     const name = isObject
       ? Object.keys(item)[0]
