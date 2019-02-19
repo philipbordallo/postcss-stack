@@ -7,8 +7,8 @@
 
 Define the stack of components and PostCSS Stack will resolve the z-indexes for you instead of playing a game of `z-index: 99999`.
 
-**Input**
-```pcss
+```css
+/* input */
 .modal {
   z-index: stack('modal');
 }
@@ -22,8 +22,9 @@ Define the stack of components and PostCSS Stack will resolve the z-indexes for 
 }
 ```
 
-**Output**
+
 ```css
+/* output */
 .modal {
   z-index: 2;
 }
@@ -72,7 +73,7 @@ module.exports = {
 
 Then call the `stack` function with relevant item name in your css.
 
-```pcss
+```css
 .application {
   z-index: stack('application');
 }
