@@ -55,6 +55,7 @@ yarn add --dev postcss-stack
 Add it to your PostCSS work-flow, [whatever way you choose to](https://github.com/postcss/postcss#usage).
 
 ```js
+// Using a postcss.config.js
 const stack = require('postcss-stack');
 
 module.exports = {
@@ -87,7 +88,7 @@ And profit.
 }
 ```
 
-See [tests](./test/) for more examples.
+See [tests](./tests/) for more examples.
 
 ## Options ##
 
