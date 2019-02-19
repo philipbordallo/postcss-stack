@@ -22,17 +22,18 @@
   },
   "babel": {
     "presets": [
-      "./config/babel.config.js"
+      "./configs/babel.config.js"
     ]
   },
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.es.js",
   "scripts": {
     "prepublishOnly": "npm test",
-    "build": "rollup --config config/rollup.config.js --silent",
-    "lint": "eslint --config config/eslint.config.js ./src/",
+    "build": "rollup --config configs/rollup.config.js --silent",
+    "lint": "eslint --config configs/eslint.config.js ./src/",
     "pretest": "npm run build && npm run lint",
-    "test": "postcss-tape --config=./.tape.js --plugin=./dist/index.cjs.js",
+    "test": "postcss-tape --config configs/config.tape.js --plugin dist/index.cjs.js --fixtures tests",
+    "preversion": "npm run test",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "dependencies": {
