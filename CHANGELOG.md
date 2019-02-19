@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [v2.1.0] – 2019-02-18
+
+## Changed
+- Dependencies [`b27d505`](https://github.com/philipbordallo/postcss-stack/commit/b27d505), [`59dc951`](https://github.com/philipbordallo/postcss-stack/commit/59dc951)
+- Documentation [`1b6cdf7`](https://github.com/philipbordallo/postcss-stack/commit/1b6cdf7), [`2d819ed`](https://github.com/philipbordallo/postcss-stack/commit/2d819ed)
+
 ## [v2.0.0] – 2019-02-03
 
 ### Changed
@@ -44,6 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Setup library and tests [`d925cbf`](https://github.com/philipbordallo/postcss-stack/commit/d925cbfba25175793bb2aa32c55b9f5f26ee0c6b)
 
 
+[v2.1.0]: https://github.com/philipbordallo/postcss-stack/compare/v2.0.0...v2.1.0
 [v2.0.0]: https://github.com/philipbordallo/postcss-stack/compare/v1.5.0...v2.0.0
 [v1.5.0]: https://github.com/philipbordallo/postcss-stack/compare/v1.4.0...v1.5.0
 [v1.4.0]: https://github.com/philipbordallo/postcss-stack/compare/v1.3.0...v1.4.0
