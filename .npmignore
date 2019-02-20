@@ -2,6 +2,7 @@ node_modules/
 *.log*
 
 src/
-test/
+tests/
+configs/
+.editorconfig
 .travis.yml
-.tape.js
