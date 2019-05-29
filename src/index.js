@@ -1,5 +1,5 @@
 import postcss from 'postcss';
-import parser from 'postcss-values-parser';
+import { parse } from 'postcss-values-parser';
 
 import getStack from './lib/getStack';
 
@@ -13,13 +13,24 @@ export default postcss.plugin(PLUGIN_NAME, options => (root) => {
     const { value: originalValue } = decl;
 
     if (stackRegExp.test(originalValue)) {
-      const ast = parser(originalValue).parse();
+      const ast = parse(originalValue);
 
-      ast.walkType('func', (node) => {
-        const stack = node.nodes.filter(item => item.type === 'string')[0].value;
+      ast.walkFuncs((node) => {
+        const stackQuoted = node.nodes.filter(item => item.type === 'quoted')[0];
+
+        const quoteRegExp = new RegExp(stackQuoted.quote, 'g');
+        const stack = stackQuoted.value.replace(quoteRegExp, '');
 
         if (typeof stacked[stack] !== 'undefined') {
-          node.replaceWith(stacked[stack]);
+          // Create a new declaration with just the found stack value
+          const replacement = postcss.decl({
+            prop: '',
+            raws: { between: '' },
+            value: stacked[stack],
+          });
+
+          // Replace `stack(STACK_NAME)` func node with new declaration node
+          node.replaceWith(replacement);
         }
         else {
           throw decl.error('Unknown stack', {
