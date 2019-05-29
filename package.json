@@ -36,16 +36,16 @@
     "preversion": "npm run test"
   },
   "dependencies": {
-    "postcss": "^7.0.14",
+    "postcss": "^7.0.16",
     "postcss-values-parser": "^2.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.3",
-    "@babel/preset-env": "^7.3.1",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "@philipbordallo/eslint-config": "^2.3.0",
-    "eslint": "^5.14.1",
-    "postcss-tape": "^4.0.0",
-    "rollup": "^1.2.2",
+    "eslint": "^5.16.0",
+    "postcss-tape": "^5.0.0",
+    "rollup": "^1.12.4",
     "rollup-plugin-babel": "^4.3.2"
   }
 }

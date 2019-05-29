@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v2.1.0] – 2019-02-18
 
-## Changed
+### Changed
 - Dependencies [`b27d505`](https://github.com/philipbordallo/postcss-stack/commit/b27d505), [`59dc951`](https://github.com/philipbordallo/postcss-stack/commit/59dc951)
 - Documentation [`1b6cdf7`](https://github.com/philipbordallo/postcss-stack/commit/1b6cdf7), [`2d819ed`](https://github.com/philipbordallo/postcss-stack/commit/2d819ed)
 
