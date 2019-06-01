@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [v3.0.0] - 2019-06-01
+
+### Deprecated
+- Node 6 support [`ef31b28`](https://github.com/philipbordallo/postcss-stack/commit/ef31b28), [`2a89a70`](https://github.com/philipbordallo/postcss-stack/commit/2a89a70)
+
 ## [v2.2.0] - 2019-05-29
 
 
@@ -53,6 +58,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Setup library and tests [`d925cbf`](https://github.com/philipbordallo/postcss-stack/commit/d925cbfba25175793bb2aa32c55b9f5f26ee0c6b)
 
 
+[v3.0.0]: https://github.com/philipbordallo/postcss-stack/compare/v2.2.0...v3.0.0
+[v2.2.0]: https://github.com/philipbordallo/postcss-stack/compare/v2.1.0...v2.2.0
 [v2.1.0]: https://github.com/philipbordallo/postcss-stack/compare/v2.0.0...v2.1.0
 [v2.0.0]: https://github.com/philipbordallo/postcss-stack/compare/v1.5.0...v2.0.0
 [v1.5.0]: https://github.com/philipbordallo/postcss-stack/compare/v1.4.0...v1.5.0
