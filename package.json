@@ -1,6 +1,6 @@
 {
   "name": "postcss-stack",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A better way to manage z-indexes",
   "author": "Philip Bordallo",
   "license": "MIT",
