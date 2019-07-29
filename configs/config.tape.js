@@ -6,9 +6,9 @@ module.exports = {
         { beneath: -1 },
         'application',
         'tool-tip',
-        'modal'
-      ]
-    }
+        'modal',
+      ],
+    },
   },
 
   'reverse': {
@@ -18,21 +18,21 @@ module.exports = {
         'modal',
         'tool-tip',
         'application',
-        { beneath: -1 }
-      ].reverse()
-    }
+        { beneath: -1 },
+      ].reverse(),
+    },
   },
 
   'list-as-a-function': {
     message: 'should allow list as a function',
     options: {
-      list: () => ([
+      list: () => [
         { beneath: -1 },
         'application',
         'tool-tip',
-        'modal'
-      ])
-    }
+        'modal',
+      ],
+    },
   },
 
   'increment': {
@@ -42,9 +42,9 @@ module.exports = {
         { beneath: -1 },
         'application',
         'tool-tip',
-        'modal'
+        'modal',
       ],
-      increment: 100
+      increment: 100,
     }
   },
 
@@ -58,21 +58,21 @@ module.exports = {
         'fourth',
         'fifth',
       ],
-    }
+    },
   },
 
   'error-message': {
     message: 'should throw an error if stack hasn’t been defined',
     errors: {
-      message: /Unknown/
+      message: /Unknown/,
     },
     options: {
       list: [
         'modal',
         'tool-tip',
         'application',
-        { beneath: -1 }
-      ]
-    }
-  }
+        { beneath: -1 },
+      ],
+    },
+  },
 };
