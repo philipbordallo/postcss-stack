@@ -45,7 +45,7 @@ module.exports = {
         'modal',
       ],
       increment: 100,
-    }
+    },
   },
 
   'order': {

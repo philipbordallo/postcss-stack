@@ -26,7 +26,7 @@ export default postcss.plugin(PLUGIN_NAME, options => (root) => {
           const replacement = postcss.decl({
             prop: '',
             raws: { between: '' },
-            value: stacked[stack],
+            value: String(stacked[stack]),
           });
 
           // Replace `stack(STACK_NAME)` func node with new declaration node

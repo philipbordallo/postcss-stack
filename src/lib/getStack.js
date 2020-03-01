@@ -1,8 +1,22 @@
+/** @typedef {Object.<string,number>} StackShape */
+
+/**
+ * @typedef Options
+ * @property {Function|string[]|StackShape[]} [list]
+ * @property {number} [increment]
+ */
+
+/** @type {Options} */
 const DEFAULT_OPTIONS = {
   list: [],
   increment: 1,
 };
 
+/**
+ * Get the stack based on the list of items
+ * @param {Options} argOptions
+ * @returns {StackShape}
+ */
 function getStack(argOptions) {
   const options = {
     ...DEFAULT_OPTIONS,
