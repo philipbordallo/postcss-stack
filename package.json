@@ -40,15 +40,15 @@
   },
   "dependencies": {
     "postcss": "^7.0.27",
-    "postcss-values-parser": "^3.1.1"
+    "postcss-values-parser": "^3.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "@babel/preset-env": "^7.8.6",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "@philipbordallo/eslint-config": "^2.4.0",
     "eslint": "^6.8.0",
     "postcss-tape": "^5.0.2",
-    "rollup": "^1.32.0",
-    "rollup-plugin-babel": "^4.3.3"
+    "rollup": "^2.7.2",
+    "rollup-plugin-babel": "^4.4.0"
   }
 }
