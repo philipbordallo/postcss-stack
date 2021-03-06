@@ -1,8 +1,0 @@
-node_modules/
-*.log*
-
-src/
-tests/
-configs/
-.editorconfig
-.travis.yml
