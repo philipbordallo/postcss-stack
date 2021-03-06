@@ -17,6 +17,11 @@
     "stacks",
     "stacking"
   ],
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
+  "files": [
+    "dist/"
+  ],
   "engines": {
     "node": ">=10.0.0"
   },
@@ -28,27 +33,25 @@
       "./configs/babel.config.js"
     ]
   },
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.es.js",
   "scripts": {
     "prepublishOnly": "npm test",
     "build": "rollup --config configs/rollup.config.js --silent",
-    "lint": "eslint --config configs/eslint.config.js ./src/",
+    "lint": "eslint ./src/",
     "pretest": "npm run build && npm run lint",
     "test": "postcss-tape --config configs/config.tape.js --plugin dist/index.cjs.js --fixtures tests",
     "preversion": "npm run test"
   },
   "dependencies": {
-    "postcss": "^7.0.27",
-    "postcss-values-parser": "^3.2.1"
+    "postcss": "^7.0.35",
+    "postcss-values-parser": "^4.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@philipbordallo/eslint-config": "^2.4.0",
-    "eslint": "^6.8.0",
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "@philipbordallo/eslint-config": "^3.2.0",
+    "eslint": "^7.21.0",
     "postcss-tape": "^5.0.2",
-    "rollup": "^2.7.2",
+    "rollup": "^2.40.0",
     "rollup-plugin-babel": "^4.4.0"
   }
 }
