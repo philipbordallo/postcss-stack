@@ -42,7 +42,7 @@
     "preversion": "npm run test"
   },
   "dependencies": {
-    "postcss": "^7.0.35",
+    "postcss": "^8.2.10",
     "postcss-values-parser": "^4.0.0"
   },
   "devDependencies": {
