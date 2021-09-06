@@ -64,7 +64,7 @@ module.exports = {
   'error-message': {
     message: 'should throw an error if stack hasn’t been defined',
     error: {
-      message: /Unknown/,
+      message: /Unknown stack/,
     },
     options: {
       list: [

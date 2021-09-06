@@ -26,18 +26,7 @@
     "node": ">=10.0.0"
   },
   "eslintConfig": {
-    "extends": "./configs/eslint.config.js",
-    "rules": {
-      "no-param-reassign": [
-        "error",
-        {
-          "props": true,
-          "ignorePropertyModificationsFor": [
-            "decl"
-          ]
-        }
-      ]
-    }
+    "extends": "./configs/eslint.config.js"
   },
   "babel": {
     "presets": [
