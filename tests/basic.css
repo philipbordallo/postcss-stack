@@ -14,3 +14,8 @@
 .beneath {
   z-index: stack('beneath');
 }
+
+.other-properties {
+  counter-reset: stack;
+  background-image: url(stack.jpg);
+}
