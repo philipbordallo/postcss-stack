@@ -26,7 +26,18 @@
     "node": ">=10.0.0"
   },
   "eslintConfig": {
-    "extends": "./configs/eslint.config.js"
+    "extends": "./configs/eslint.config.js",
+    "rules": {
+      "no-param-reassign": [
+        "error",
+        {
+          "props": true,
+          "ignorePropertyModificationsFor": [
+            "decl"
+          ]
+        }
+      ]
+    }
   },
   "babel": {
     "presets": [
@@ -42,16 +53,18 @@
     "preversion": "npm run test"
   },
   "dependencies": {
-    "postcss": "^7.0.35",
-    "postcss-values-parser": "^4.0.0"
+    "postcss-values-parser": "^6.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.8",
-    "@babel/preset-env": "^7.13.9",
-    "@philipbordallo/eslint-config": "^3.2.0",
-    "eslint": "^7.21.0",
-    "postcss-tape": "^5.0.2",
-    "rollup": "^2.40.0",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.4",
+    "@philipbordallo/eslint-config": "^4.0.1",
+    "eslint": "^7.32.0",
+    "postcss-tape": "^6.0.1",
+    "rollup": "^2.56.3",
     "rollup-plugin-babel": "^4.4.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.3.6"
   }
 }
