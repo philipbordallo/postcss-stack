@@ -49,6 +49,7 @@
     "@babel/preset-env": "^7.15.4",
     "@philipbordallo/eslint-config": "^4.0.1",
     "eslint": "^7.32.0",
+    "postcss": "^8.3.6",
     "postcss-tape": "^6.0.1",
     "rollup": "^2.56.3",
     "rollup-plugin-babel": "^4.4.0"
