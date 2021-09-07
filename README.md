@@ -43,10 +43,10 @@ Define the stack of components and PostCSS Stack will resolve the z-indexes for 
 
 ```sh
 # npm
-npm install --save-dev postcss-stack
+npm install --save-dev postcss postcss-stack
 
 # or yarn
-yarn add --dev postcss-stack
+yarn add --dev postcss postcss-stack
 ```
 
 
@@ -75,14 +75,14 @@ module.exports = {
 Then call the `stack` function with relevant item name in your css.
 
 ```css
+/* input */
 .application {
   z-index: stack('application');
 }
 ```
 
-And profit.
-
 ```css
+/* output */
 .application {
   z-index: 0;
 }
