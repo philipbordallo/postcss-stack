@@ -2,7 +2,7 @@
 > A better way to manage z-indexes
 
 [![NPM Version][npm-img]][npm-url]
-[![Build Status][cli-img]][cli-url]
+[![Build Status][ci-img]][ci-url]
 [![Dependency Status][david-img]][david-url] 
 
 Define the stack of components and PostCSS Stack will resolve the z-indexes for you instead of playing a game of `z-index: 99999`.
