@@ -166,8 +166,8 @@ For more information on stacking context, [MDN has a good overview](https://deve
 [david-img]: https://img.shields.io/david/philipbordallo/postcss-stack.svg
 [david-url]: https://david-dm.org/philipbordallo/postcss-stack
 
-[ci-img]: https://img.shields.io/github/workflow/status/philipbordallo/postcss-color-emoji/Continuous%20Integration
-[ci-url]: https://github.com/philipbordallo/postcss-color-emoji/actions/workflows/ci.yml
+[ci-img]: https://img.shields.io/github/workflow/status/philipbordallo/postcss-stack/Continuous%20Integration
+[ci-url]: https://github.com/philipbordallo/postcss-stack/actions/workflows/ci.yml
 
 [npm-img]: https://img.shields.io/npm/v/postcss-stack.svg
 [npm-url]: https://www.npmjs.com/package/postcss-stack
